@@ -1,0 +1,21 @@
+From 82a522b320b51d07ab39a2722e3eb047b0d3c252 Mon Sep 17 00:00:00 2001
+From: MarcFontaine <MarcFontaine@users.noreply.github.com>
+Date: Sun, 30 Mar 2025 00:47:19 +0100
+Subject: [PATCH] Disable spyware
+
+
+diff --git a/SBC/rpi-4/device_driver/firmware/radioberry.c b/SBC/rpi-4/device_driver/firmware/radioberry.c
+index 5dd318a..a8f4327 100644
+--- a/SBC/rpi-4/device_driver/firmware/radioberry.c
++++ b/SBC/rpi-4/device_driver/firmware/radioberry.c
+@@ -531,7 +531,6 @@ static void *rb_register_thread(void *arg) {
+ 	sprintf(firmwareversion,"%s", FIRMWAREVERSION);
+ 	sprintf(driverversion,"%.2f", driver_version/100.0); 
+ 	gateware_fpga_type == 0 ? sprintf(fpgatype,"%s", "-") : gateware_fpga_type == 1 ? sprintf(fpgatype,"%s", "CL016") : sprintf(fpgatype,"%s", "CL025");
+-	registerRadioberry();
+ 	return NULL;
+ }
+ 
+-- 
+2.47.0
+

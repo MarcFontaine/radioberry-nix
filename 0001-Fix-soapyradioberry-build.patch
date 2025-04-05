@@ -1,0 +1,21 @@
+From 02eda0c6b4689751bc7cb9d15f61370564e0fb55 Mon Sep 17 00:00:00 2001
+From: MarcFontaine <MarcFontaine@users.noreply.github.com>
+Date: Fri, 4 Apr 2025 11:10:26 +0200
+Subject: [PATCH] Fix soapyradioberry build
+
+
+diff --git a/SBC/rpi-4/SoapyRadioberrySDR/i2c.h b/SBC/rpi-4/SoapyRadioberrySDR/i2c.h
+index 3fdca4a..291407a 100644
+--- a/SBC/rpi-4/SoapyRadioberrySDR/i2c.h
++++ b/SBC/rpi-4/SoapyRadioberrySDR/i2c.h
+@@ -24,6 +24,7 @@
+ 
+ #include <cstdio>
+ #include <cstdarg>
++#include <cstdint>
+ #include <string>
+ #include <unistd.h>
+ #include <fcntl.h>
+-- 
+2.47.0
+
